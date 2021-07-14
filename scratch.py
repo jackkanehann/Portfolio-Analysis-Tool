@@ -78,6 +78,16 @@ print(portfolio_df.head(99))
 ##convert csv data into portfolio dataframe
 ##create portfolio dataframe from input instead of csv import
 """ """
+testSeries = getWeeklyReturns('AAPL', c)
+testSeries = testSeries[1]
+testSeries = pd.Series(testSeries)
+benchmark = getWeeklyReturns('SPY', c)
+benchmark = benchmark[1]
+benchmark = pd.Series(benchmark)
+
+##return calculations, need to separate series of returns from symbol key in dictionary
+print("Correlation is ", testSeries.corr(benchmark, method = 'pearson', min_periods = 10))
+print("Covariance is ", testSeries.cov(benchmark, min_periods = 10, ddof = 1))
 
 
 class Portfolio:
