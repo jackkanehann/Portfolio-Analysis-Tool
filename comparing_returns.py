@@ -8,7 +8,7 @@ from tabulate import tabulate
 import pyEX as p
 
 ##sandbox API key, so no fees for historical data
-iex_sandbox_key = 'Tpk_ec52cb37b61542d8b350bf9df129fcb5'
+iex_sandbox_key = 'your sandbox API here'
 
 import get_csv_module
 from create_portfolio_df import transformCSV, recalculateWeights
@@ -184,7 +184,7 @@ print("comparing_returns.py has loaded")
 if __name__ == "__main__":
 
     ##Grab CSV file using path + file name
-    currentPortfolio = get_csv_module.CSVGetInfo("/Users/jackk/Projects/pythonProjects/PortfolioAnalysis/", "holdings_sample.csv")
+    currentPortfolio = get_csv_module.CSVGetInfo("local file path here", "holdings_sample.csv")
 
     get_csv_module.display_file_location(currentPortfolio.path, currentPortfolio.file_name)
 
@@ -198,7 +198,7 @@ if __name__ == "__main__":
     weightList = portfolio_df['Weight'].tolist()
 
     ##IEX Stock Price Return sourcing using pyEX library
-    c= p.Client(api_token = 'Tpk_ec52cb37b61542d8b350bf9df129fcb5', version = 'sandbox')
+    c= p.Client(api_token = 'your sandbox api key here', version = 'sandbox')
 
     TickerReturnStatistics("AAPL", "MSFT", c)
 
