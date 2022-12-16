@@ -1,4 +1,4 @@
-Using Python data science tools (Pandas, Numpy, Scipy, matplotlib, etc.) and IEX Finance Market Data API, I created a tool to analyze portfolio risk.  My source files are Holdings reports generated from the Tamrac Portfolio Reporting software suite.  
+Using Python data science tools (Pandas, Numpy, Scipy, matplotlib, etc.) and IEX Finance Market Data API, I created a tool to analyze portfolio risk.  The data files are  generated from the Tamarac Reporting software suite.  
 
 These scripts will output a portfolio's correlation and covariance in relation to a given benchmark, the returns of the portfolio and benchmark over a given time period, and the portfolio's Sharpe Ratio and daily Value at Risk (VaR).  There are also functions for finding the returns, covariance, and correlation among individual stock tickers.  Below are historical return graphs for the sample portfolio CSV and the sample statistical ouput.  All calculations are for the previous 5 years of daily returns.
 
